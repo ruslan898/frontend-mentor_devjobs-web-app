@@ -1,26 +1,49 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primitive colors */
+  --neutral-0: #ffffff;
+  --neutral-950: #000000;
+  --slate-100: #f4f6f8;
+  --slate-300: #9daec2;
+  --slate-500: #6e8098;
+  --slate-900: #19202d;
+  --slate-950: #121721;
+  --indigo-300: #939bf4;
+  --indigo-500: #5964e0;
+
+  /* Semantic aliases (light theme default)  */
+  --background: var(--slate-100);
+  --surface: var(--neutral-0);
+  --text: var(--slate-900);
+  --text-muted: var(--slate-500);
+  --text-inverted: var(--neutral-0);
+  --accent: var(--indigo-500);
+  --accent-hover: var(--indigo-300);
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-tpg: var(--text);
+  --color-tpg-muted: var(--text-muted);
+  --color-tpg-inverted: var(--text-inverted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--slate-950);
+    --surface: var(--slate-900);
+    --text: var(--neutral-0);
+    --text-muted: var(--slate-500);
+    --text-inverted: var(--neutral-0);
+    --accent: var(--indigo-500);
+    --accent-hover: var(--indigo-300);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text, #000)
 }
