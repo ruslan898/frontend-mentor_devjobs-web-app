@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 :root {
   /* Primitive colors */
@@ -44,6 +44,11 @@
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--text, #000)
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text, #000);
 }
