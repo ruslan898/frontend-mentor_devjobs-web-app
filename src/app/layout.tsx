@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Kumbh_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const kumbhSans = Kumbh_Sans({
   subsets: ["latin"],
@@ -13,11 +14,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${kumbhSans.className} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-background text-tpg-muted">{children}</body>
+    <html lang="en" className={`${kumbhSans.className} h-full antialiased`}>
+      <body className="bg-background text-tpg-muted flex min-h-full flex-col">
+        <Header />
+
+        {children}
+      </body>
     </html>
   );
 }

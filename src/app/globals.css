@@ -20,6 +20,11 @@
   --text-inverted: var(--neutral-0);
   --accent: var(--indigo-500);
   --accent-hover: var(--indigo-300);
+
+  /* Background images */
+  --bg-header-mobile: url("/header-bg/bg-pattern-header-mobile.svg");
+  --bg-header-tablet: url("/header-bg/bg-pattern-header-tablet.svg");
+  --bg-header-desktop: url("/header-bg/bg-pattern-header-desktop.svg");
 }
 
 @theme inline {
@@ -30,6 +35,11 @@
   --color-tpg-inverted: var(--text-inverted);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
+}
+
+@utility container {
+  width: clamp(327px, 90%, 1110px);
+  margin: 0 auto;
 }
 
 @media (prefers-color-scheme: dark) {
