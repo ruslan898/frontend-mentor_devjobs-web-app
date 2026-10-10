@@ -17,7 +17,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${kumbhSans.className} h-full antialiased`}>
       <body className="bg-background text-tpg-muted flex min-h-full flex-col">
         <Header />
-
         {children}
       </body>
     </html>
