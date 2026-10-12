@@ -1,5 +1,5 @@
 import clsx from "clsx";
-
+import { twMerge } from "tailwind-merge";
 import type { ElementType, ReactNode } from "react";
 
 type TitleProps = {
@@ -16,12 +16,14 @@ export default function Title({
   variant,
   ...props
 }: TitleProps) {
-  const classes = clsx(
-    "font-bold leading-[125%] text-tpg transition duration-100",
-    variant === "lg" && "text-[20px] md:text-[28px]",
-    variant === "md" && "text-[20px] md:text-[24px]",
-    variant === "sm" && "text-[20px]",
-    className,
+  const classes = twMerge(
+    clsx(
+      "font-bold leading-[125%] text-tpg transition duration-100",
+      variant === "lg" && "text-[20px] md:text-[28px]",
+      variant === "md" && "text-[20px] md:text-[24px]",
+      variant === "sm" && "text-[20px]",
+      className,
+    ),
   );
   const Tag = `h${level}` as ElementType;
 
