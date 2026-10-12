@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { type ChangeEvent, useState } from "react";
 import Image from "next/image";
@@ -23,7 +23,7 @@ export default function ThemeSwitch() {
           className="peer absolute h-px w-px opacity-0"
         />
 
-        <span className="before:bg-accent absolute inset-0 rounded-full bg-(--neutral-0) transition-colors duration-200 ease-linear before:absolute before:top-1.25 before:left-1.25 before:h-3.5 before:w-3.5 before:rounded-full before:transition-transform before:delay-200 before:content-[''] before:ease-initial peer-checked:before:translate-x-6" />
+        <span className="before:bg-accent hover:before:bg-accent-hover absolute inset-0 rounded-full bg-(--neutral-0) transition-colors duration-200 ease-linear before:absolute before:top-1.25 before:left-1.25 before:h-3.5 before:w-3.5 before:rounded-full before:transition before:delay-100 before:content-[''] before:ease-initial peer-checked:before:translate-x-6" />
       </label>
       <Image src={MoonIcon} alt="Moon icon" />
     </div>
