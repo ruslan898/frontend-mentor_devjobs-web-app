@@ -15,7 +15,7 @@ export default function Button({
 }: ButtonProps) {
   const classes = twMerge(
     clsx(
-      "leading-[125%] transition-colors delay-75 cursor-pointer rounded-md inline-block py-3 max-w-37.5",
+      "leading-[125%] transition-colors delay-75 cursor-pointer rounded-md inline-block py-3 max-w-37.5 font-bold",
       {
         "bg-accent text-tpg-inverted hover:bg-accent-hover px-8":
           variant === "primary",

@@ -19,9 +19,9 @@ export default function Title({
   const classes = twMerge(
     clsx(
       "font-bold leading-[125%] text-tpg transition duration-100",
-      variant === "lg" && "text-[20px] md:text-[28px]",
-      variant === "md" && "text-[20px] md:text-[24px]",
-      variant === "sm" && "text-[20px]",
+      variant === "lg" && "text-xl md:text-[28px]",
+      variant === "md" && "text-xl md:text-2xl",
+      variant === "sm" && "text-xl",
       className,
     ),
   );

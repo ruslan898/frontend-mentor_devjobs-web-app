@@ -47,7 +47,7 @@ export default function Card({ data }: CardProps) {
         </Title>
         <p>{company}</p>
       </div>
-      <p className="text-accent text-sm">{location}</p>
+      <p className="text-accent text-sm font-bold">{location}</p>
     </div>
   );
 }
