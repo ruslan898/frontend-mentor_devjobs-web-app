@@ -3,7 +3,7 @@ import Title from "./Title";
 
 export default function JobInfo() {
   return (
-    <section className="bg-surface container max-w-182.5 rounded-md px-6 py-10 md:p-11">
+    <section className="bg-surface container max-w-182.5 rounded-md px-6 py-10 md:p-11 dark:text-(--slate-300)">
       <header className="flex flex-col gap-14 md:flex-row md:items-center md:justify-between">
         <div>
           <ul className="mb-1 flex gap-3 md:mb-1.5">

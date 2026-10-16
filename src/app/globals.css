@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root {
   /* Primitive colors */
@@ -42,14 +43,12 @@
   margin: 0 auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--slate-950);
-    --surface: var(--slate-900);
-    --text: var(--neutral-0);
-    --text-muted: var(--slate-500);
-    --text-inverted: var(--neutral-0);
-    --accent: var(--indigo-500);
-    --accent-hover: var(--indigo-300);
-  }
+[data-theme="dark"] {
+  --background: var(--slate-950);
+  --surface: var(--slate-900);
+  --text: var(--neutral-0);
+  --text-muted: var(--slate-500);
+  --text-inverted: var(--neutral-0);
+  --accent: var(--indigo-500);
+  --accent-hover: var(--indigo-300);
 }

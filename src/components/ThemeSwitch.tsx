@@ -1,16 +1,30 @@
 "use client";
 
-import { type ChangeEvent, useState } from "react";
 import Image from "next/image";
+import { useSyncExternalStore } from "react";
+import { useTheme } from "next-themes";
 import SunIcon from "@/assets/desktop/icon-sun.svg";
 import MoonIcon from "@/assets/desktop/icon-moon.svg";
 
-export default function ThemeSwitch() {
-  const [isDark, setIsDark] = useState(false);
+function subscribe() {
+  return () => {};
+}
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setIsDark(event.target.checked);
-  };
+export default function ThemeSwitch() {
+  const mounted = useSyncExternalStore(
+    subscribe,
+    () => true,
+    () => false,
+  );
+  const { theme, setTheme } = useTheme();
+
+  if (!mounted) {
+    return null;
+  }
+
+  function toggleTheme() {
+    setTheme(theme === "dark" ? "light" : "dark");
+  }
 
   return (
     <div className="flex items-center gap-4">
@@ -18,8 +32,8 @@ export default function ThemeSwitch() {
       <label className="relative inline-block h-6 w-12 cursor-pointer">
         <input
           type="checkbox"
-          checked={isDark}
-          onChange={handleChange}
+          checked={theme === "dark"}
+          onChange={toggleTheme}
           className="peer absolute h-px w-px opacity-0"
         />
 

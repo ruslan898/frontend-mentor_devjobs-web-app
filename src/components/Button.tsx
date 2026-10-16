@@ -19,7 +19,7 @@ export default function Button({
       {
         "bg-accent text-tpg-inverted hover:bg-accent-hover px-8":
           variant === "primary",
-        "bg-[#b7b9c6] text-(--indigo-500) hover:bg-[#9fa2cc] px-5":
+        "bg-[#b7b9c6] text-(--indigo-500) hover:bg-[#9fa2cc] px-5 dark:bg-[#2d333f] dark:text-tpg-inverted dark:hover:bg-[#545863]":
           variant === "secondary",
         "bg-[#c9c9c9] text-tpg-inverted hover:bg-[#d2d2d2] px-5":
           variant === "light",
